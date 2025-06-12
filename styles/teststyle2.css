@@ -1,0 +1,247 @@
+:root {
+  --borders-color: #202020;
+  --main-light: #405a75;
+  --main: #2c3e50;
+  --main-dark: #212e3b;
+  --button-idle: #405a75;
+  --button-hover: #212e3b;
+  --text-color: #fff;
+  --transform_time: 0.25s;
+}
+
+/* Main layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--borders-color);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+}
+
+.left, .right {
+  flex: 1 1 30%;
+  max-width: 30%;
+  background-color: var(--borders-color);
+}
+
+.page_container {
+  min-width: 660px;
+  flex: 0 0 40%;
+  max-width: 40%;
+  background-color: var(--main);
+}
+
+.center {
+  min-width: 660px;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: calc(100vh - 166px);
+  max-width: 50vw;
+  margin: 0 auto;
+  padding: 2em;
+}
+/*-----------*/
+
+/* Script changes */
+body.dark {
+  --main: #ddd;
+  --main-light: #fff;
+  --main-dark: #bbb;
+  --button-idle: #fff;
+  --button-hover: #bbb;
+  --borders-color: #aaa;
+  --text-color: #000;
+}
+
+body.instant_transform {
+  --transform_time: 0s;
+}
+/*----------------*/
+
+
+/* Navgation */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  background-color: var(--main-dark);
+}
+
+.site_name {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.selected_page {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: var(--main-light);
+  color: var(--text-color);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color var(--transform_time);
+}
+
+.nav_links a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: var(--button-idle);
+  color: var(--text-color);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: background-color var(--transform_time);
+}
+
+.nav_links a:hover {
+  background-color: var(--button-hover);
+  color: var(--text-color);
+  text-decoration: none;
+  
+}
+
+.nav_image {
+  width: 48px;
+  margin-right: 0.5em;
+  background-color: var(--main-dark);
+}
+
+
+/*-----------*/
+
+img {
+  background-color: var(--main);
+}
+
+h1, h3, h5, p, a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Bottom block */
+.bottom_block {
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--main-dark);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  box-sizing: border-box;
+  line-height: 0.9;
+  padding-top: 1em;
+  }
+
+.bottom_block p, a {
+  text-align: center;
+  margin: 0.2em 0;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.bottom_block ul {
+    text-align: center;
+}
+/*--------------*/
+
+/* Buttons */
+button {
+  padding: 0.5em 0.5em;
+  background-color: var(--button-idle);
+  color: var(--text-color);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color var(--transform_time);
+  margin: 1em auto;
+}
+
+button:disabled {
+  background-color: var(--main-dark);
+  color: #ccc;
+}
+/*---------*/
+
+/* Info block */
+
+.info_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 0.5em 0;
+  padding: 1.5em;
+  border: 3px solid #ccc;
+  border-radius: 25px;
+  background-color: var(--main-light); 
+  background-image: var(--main-light);
+  box-shadow: 0 5px 5px rgba(0 , 0 , 0 , 0.5);
+}
+
+.info_block img {
+  max-width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 3px solid #ccc;
+}
+
+.image_caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.info_block .text {
+  max-width: 600px;
+  flex: 1;
+}
+
+.info_block.img_text {
+  flex-direction: row;
+}
+
+.info_block.text_img {
+  flex-direction: row-reverse;
+}
+
+
+.info_block.img_text:hover .info_block.text_img:hover{
+  text-decoration: none;
+  transition: background-color var(--transform_time);
+  transition: background-image var(--transform_time) ease-in-out;
+}
+
+.info_block.text_img:hover {
+  background-image: linear-gradient( to right , var(--main-dark) , var(--main-light));
+}
+
+.info_block.img_text:hover {
+  background-image: linear-gradient( to left , var(--main-dark) , var(--main-light));
+}
+
+/*------------*/
