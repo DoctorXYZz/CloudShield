@@ -18,9 +18,15 @@ theme_button.addEventListener("click", function (event) {
     //let text = test.textContent || "";
     //ClearStringSlowly("ad",20);
     console.log("!!!");
-    var isDark = body.classList.toggle("dark");
-    theme_button.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    var is_dark = body.classList.toggle("dark");
+    if (is_dark) {
+        theme_button.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        theme_button.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+    }
     ApplyTheme();
 });
 function ClearStringSlowly(str_id, delay) {

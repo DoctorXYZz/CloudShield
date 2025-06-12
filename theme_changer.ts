@@ -26,9 +26,14 @@ theme_button.addEventListener("click", (event) : void => {
     
     
     console.log("!!!");
-    const isDark = body.classList.toggle("dark");
-    theme_button.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    const is_dark = body.classList.toggle("dark");
+    if (is_dark) {
+      theme_button.textContent = "☀️";
+      localStorage.setItem("theme", "dark");
+    } else {
+      theme_button.textContent = "🌙";
+      localStorage.setItem("theme", "light");
+    }
     ApplyTheme();
     
 });

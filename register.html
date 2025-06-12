@@ -24,44 +24,38 @@
                 <div class="nav_links">
                     <button id="theme_toggle" type="button">🌙</button>
                     <script src="theme_changer.js"></script>
-                    
-                    <div class="selected_page">Главная</div>
+
+                    <a href="index.html">Главная</a>
                     <a href="about.html">О нас</a>
-                    <a href="register.html">Регистрация</a>
+                    <div class="selected_page">Регистрация</div>
+                    
                 </div>
             </div>
 
             <div class="center">
 
-                <a href="register.html">
-                    <div class="info_block img_text">
-                        <img src="styles/stockimg.png">
-                        <div class="text">
-                            <h3>Консалтинг</h3>
-                            <p>Мне лень писать</p>
-                        </div>
+                <form id="regForm">
+                        
+                    <label for="email"><h3>Email:</h3></label>
+                    <div class="form_component">        
+                        <input for="email" id="email" required>
                     </div>
-                </a>
+                        
+                    <label for="password"><h3>Пароль:</h3></label>
+                    <div class="form_component">
+                        <input for="password" id="password" required>
+                    </div>
+                        
+                    <label for="confirmPassword"><h3>Подтвердите пароль:</h3></label>
+                    <div class="form_component">   
+                        <input for="password" id="confirmPassword" required>
+                    </div>
 
-                <a href="register.html">
-                    <div class="info_block text_img">
-                        <img src="styles/stockimg.png">
-                        <div class="text">
-                            <h3>Аудит</h3>
-                            <p>Мне лень писать</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="register.html">
-                    <div class="info_block img_text">
-                        <img src="styles/stockimg.png">
-                        <div class="text">
-                            <h3>Защита</h3>
-                            <p>Мне лень писать</p>
-                        </div>
-                    </div>
-                </a>
+                    <button id="btn_submit" type="submit" disabled>Зарегистрироваться </button>
+                        
+                    <p id="message" class="reg_state" style="display: none;"></p>
+                </form>
+                <script src="script.js"></script>
 
             </div>
 
