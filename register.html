@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>CloudShield</title>
-    <link rel="stylesheet" href="styles/teststyle2.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="icon" href="styles/logo.png">
 </head>
 
-<body onload="ApplyTheme()">
+<body onload="Initialize()">
+    
     <div class="container">
 
         <div class="left"></div>
@@ -15,15 +16,14 @@
         <div class="page_container">
 
             <div class="nav">
-
                 <div class="site_name">
-                    <img src="styles/logo.png" class="nav_image">
+                    <img src="styles/logo.png" id="logo" class="nav_image">
                     <h5>CloudShield</h5>
                 </div>
                 
                 <div class="nav_links">
                     <button id="theme_toggle" type="button">🌙</button>
-                    <script src="theme_changer.js"></script>
+                    
 
                     <a href="index.html">Главная</a>
                     <a href="about.html">О нас</a>
@@ -33,32 +33,39 @@
             </div>
 
             <div class="center">
-
+                
+                
+                <div id="clouds"></div>
+                <script src="scripts/js/main.js"></script>
                 <form id="regForm">
-                        
-                    <label for="email"><h3>Email:</h3></label>
+                    
+                    <label for="login"><h3 id="reg_label1">|</h3></label>
+                    <div class="form_component">        
+                        <input for="login" id="login" required>
+                    </div>
+
+                    <label for="email"><h3 id="reg_label2">|</h3></label>
                     <div class="form_component">        
                         <input for="email" id="email" required>
                     </div>
                         
-                    <label for="password"><h3>Пароль:</h3></label>
+                    <label for="password" ><h3 id="reg_label3">|</h3></label>
                     <div class="form_component">
                         <input for="password" id="password" required>
                     </div>
                         
-                    <label for="confirmPassword"><h3>Подтвердите пароль:</h3></label>
+                    <label for="confirmPassword"><h3 id="reg_label4">|</h3></label>
                     <div class="form_component">   
                         <input for="password" id="confirmPassword" required>
                     </div>
 
                     <button id="btn_submit" type="submit" disabled>Зарегистрироваться </button>
                         
-                    <p id="message" class="reg_state" style="display: none;"></p>
+                    <p id="message" class="reg_state" style="display: none; color: black;"></p>
                 </form>
-                <script src="script.js"></script>
 
             </div>
-
+            <script src="scripts/js/registartion_stuff.js"></script>
             <div class="bottom_block">
                     
                 <p> fedosseyenkosergey@gmail.com | +7-708-070-08-74 </p>

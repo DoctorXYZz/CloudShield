@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>CloudShield</title>
-    <link rel="stylesheet" href="styles/teststyle2.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="icon" href="styles/logo.png">
 </head>
 
-<body onload="ApplyTheme()">
+<body onload="Initialize()">
     <div class="container">
 
         <div class="left"></div>
@@ -17,13 +17,12 @@
             <div class="nav">
 
                 <div class="site_name">
-                    <img src="styles/logo.png" class="nav_image">
+                    <img src="styles/logo.png" class="nav_image" id="logo">
                     <h5>CloudShield</h5>
                 </div>
                 
                 <div class="nav_links">
                     <button id="theme_toggle" type="button">🌙</button>
-                    <script src="theme_changer.js"></script>
 
                     <a href="index.html">Главная</a>
                     <div class="selected_page">О нас</div>
@@ -34,15 +33,18 @@
 
             <div class="center">
 
+                <div id="clouds"></div>
+                <script src="scripts/js/main.js"></script>
+
                 <a href="register.html">
                     <div class="info_block img_text">
                         <div class="image_caption">
-                            <img src="styles/lycaon.png">
-                            <div class="caption">Zenless Zone Zero</div>
+                            <img src="styles/employee1.png">
+                            <div class="caption">Глава компании</div>
                         </div>
                         <div class="text">
-                            <h3>Фурри волк</h3>
-                            <p>Когда Ликаон попадает по врагу усиленной особой атакой «Охотничий азарт», враг получает на 12% оглушения. Эффект срабатывает один раз в 8 сек. При максимальном заряде усиленной особой атаки «Охотничий азарт» эффект дополнительно усиливается на 10%.</p>
+                            <h3>Артём</h3>
+                            <p></p>
                         </div>
                     </div>
                 </a>
@@ -50,12 +52,12 @@
                 <a href="register.html">
                     <div class="info_block text_img">
                         <div class="image_caption">
-                            <img src="styles/ishmael.png">
-                            <div class="caption">Limbus Company</div>
+                            <img src="styles/employee2.png">
+                            <div class="caption">Какой-то мужик</div>
                         </div>
                         <div class="text">
-                            <h3>Измаил</h3>
-                            <p><p>[Начало битвы] На 2 других союзных идентичностей клана Курокумо с наибольшей скоростью: применяет 1 повышение урона (один раз за ход) - Если здесь 6+ союзных идентичностей клана Курокумо, включая этого юнита, применяет 2 повышения урона к 5 союзникам вместо предыдущего эффекта [При ударе] Накладывает 2 кровотечения [При ударе] Накладывает +2 к счётчику кровотечения</p></p>
+                            <h3>Антон</h3>
+                            <p></p>
                         </div>
                     </div>
                 </a>
@@ -63,13 +65,13 @@
                 <a href="register.html">
                     <div class="info_block img_text">
                         <div class="image_caption">
-                            <img src="styles/gilberta.png">
-                            <div class="caption">Arknights: Endfield</div>
+                            <img src="styles/employee3.png">
+                            <div class="caption">HR-менеджер</div>
                         </div>
                         
                         <div class="text">
-                            <h3>Гилберта</h3>
-                            <p>Basic Attack: 4-sequence attack that deals Nature DMG. As the controlled operator, Final Strike also deals 16 Stagger. Dive Attack: Basic Attack Performed in mid-air becomes a dive attack that deals Nature DMG to nearby enemy. Dodge Attack: Basic Attack Performed right after a dodge becomes a dodge attack that deals Nature DMG. Finisher: Basic attack performed near Staggered enemy becomes a finisher attack that deals massive Nature DMG to the said enemy and restores some SP.</p>
+                            <h3>Анна</h3>
+                            <p></p>
                         </div>
                     </div>
                 </a>

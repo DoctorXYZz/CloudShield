@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>CloudShield</title>
-    <link rel="stylesheet" href="styles/teststyle2.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="icon" href="styles/logo.png">
 </head>
 
-<body onload="ApplyTheme()">
+<body onload="Initialize()">
     <div class="container">
 
         <div class="left"></div>
@@ -17,13 +17,12 @@
             <div class="nav">
 
                 <div class="site_name">
-                    <img src="styles/logo.png" class="nav_image">
+                    <img src="styles/logo.png" class="nav_image" id="logo">
                     <h5>CloudShield</h5>
                 </div>
                 
                 <div class="nav_links">
                     <button id="theme_toggle" type="button">🌙</button>
-                    <script src="theme_changer.js"></script>
                     
                     <div class="selected_page">Главная</div>
                     <a href="about.html">О нас</a>
@@ -33,19 +32,27 @@
 
             <div class="center">
 
+                <div id="clouds"></div>
+                <script src="scripts/js/main.js"></script>
+
+                <div class="ad" id="ad">
+                    Защититесь даже будучи на высоте
+                </div>
+                <script src="scripts/js/ad_block.js"></script>
+
                 <a href="register.html">
                     <div class="info_block img_text">
-                        <img src="styles/stockimg.png">
+                        <img src="styles/stockimg.png" class="info_img">
                         <div class="text">
                             <h3>Консалтинг</h3>
-                            <p>Мне лень писать</p>
+                            <p>Наши специалисты проанализируют Ваш сервис и составят план по защите облачного сервиса</p>
                         </div>
                     </div>
                 </a>
 
                 <a href="register.html">
                     <div class="info_block text_img">
-                        <img src="styles/stockimg.png">
+                        <img src="styles/stockimg3.png" class="info_img">
                         <div class="text">
                             <h3>Аудит</h3>
                             <p>Мне лень писать</p>
@@ -55,7 +62,7 @@
 
                 <a href="register.html">
                     <div class="info_block img_text">
-                        <img src="styles/stockimg.png">
+                        <img src="styles/stockimg2.png" class="info_img">
                         <div class="text">
                             <h3>Защита</h3>
                             <p>Мне лень писать</p>
