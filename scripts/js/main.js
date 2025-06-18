@@ -60,14 +60,14 @@ var clouds_opacity = 0;
 var content_opacity = 0;
 for (let i = 0; i < CLOUDS_AMOUNT; i++) {
     const img = document.createElement("img");
-    img.src = "styles/Cloud.png";
+    img.src = "styles/images/Cloud.png";
     img.style.backgroundColor = `rgba(0, 0, 0, 0)`;
     img.classList.add("cloud_object");
     container.appendChild(img);
     clouds.push({
         element: img,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
+        x: Math.random() * window.innerWidth / scale_zoom_w,
+        y: Math.random() * window.innerHeight / scale_zoom_h,
         direction: Math.random() < 0.5 ? -1 : 1,
         spd: RandomNumberInRange(1, 3) / 10,
     });

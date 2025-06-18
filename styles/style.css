@@ -41,6 +41,18 @@ html, body {
   background-color: var(--main);
 }
 
+@media only screen and (max-width: 800px) {
+  .left, .right {
+    max-width: 0%;
+  }
+
+  .page_container {
+    min-width: 660px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 .center {
   min-width: 660px;
   background-color: var(--main);
@@ -387,6 +399,7 @@ input {
   border-top-style: solid;
   border-bottom-style: solid;
   box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
+  min-height: 1.2em;
   z-index: 3;
 }
 
