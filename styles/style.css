@@ -41,7 +41,23 @@ html, body {
   background-color: var(--main);
 }
 
-@media screen and (max-width: 768px) {
+.center {
+  min-width: 660px;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: calc(100vh - 9em + 1px);
+  max-width: 50vw;
+  margin: 0 auto;
+  padding: 2em;
+  opacity: var(--content_opacity);
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    font-size: large;
+  }
   .left, .right {
     display: none;
   }
@@ -49,23 +65,14 @@ html, body {
   .page_container {
     flex: 1 1 100%;
     max-width: 100%;
-    min-width: 0; /* Optional: prevents overflow */
+    min-width: 100vw;
+  }
+
+  .center {
+    min-width: inherit;
   }
 }
-.center {
-  min-width: 660px;
-  background-color: var(--main);
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  min-height: calc(100vh - 164px);
-  max-width: 50vw;
-  margin: 0 auto;
-  padding: 2em;
-  opacity: var(--content_opacity);
-  z-index: 3;
-}
-/*-----------*/
+
 
 /* Script changes */
 body.dark {
@@ -83,8 +90,6 @@ body.dark {
 body.instant_transform {
   --transform_time: 0s;
 }
-/*----------------*/
-
 
 /* Navgation */
 
@@ -114,6 +119,7 @@ body.instant_transform {
   border-radius: 5px;
   text-decoration: none;
   font-weight: 500;
+  box-shadow: 0px 0px 0px 3px var(--main-light);
   transition: background-color var(--transform_time);
 }
 
@@ -140,9 +146,6 @@ body.instant_transform {
   background-color: rgba(0,0,0,0);
 }
 
-
-/*-----------*/
-
 img {
   background-color: var(--main);
 }
@@ -165,6 +168,7 @@ h1, h3, h5, p, a {
   padding-top: 1em;
   position: relative;
   z-index: 5;
+  box-shadow: 0px -12px 5px 7px var(--main-dark);
 }
 
 .bottom_block p, a {
@@ -178,7 +182,6 @@ h1, h3, h5, p, a {
 .bottom_block ul {
     text-align: center;
 }
-/*--------------*/
 
 /* Buttons */
 button {
@@ -197,21 +200,16 @@ button:disabled {
   background-color: var(--main-dark);
   color: #ccc;
 }
-/*---------*/
 
 /* Info block */
-
 .info_block {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1em;
-  /*margin: 0.5em 0;*/
   margin: 0.5em -2em;
   padding: 1.5em 3em;
-  /*border: 3px solid #ccc;
-  border-radius: 25px;*/
   background-color: var(--main-light); 
   background-image: var(--main-light);
   box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
@@ -219,18 +217,12 @@ button:disabled {
   border: 2px var(--main-dark);
   border-top-style: solid;
   border-bottom-style: solid;
-  /*
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
-  */
 }
 
 .info_block img {
   max-width: 200px;
   height: auto;
   flex-shrink: 0;
-  /*
-  border-radius: 5px;
-  */
   border: 3px solid var(--main-dark);
   z-index: 3;
   box-shadow: 0px 1.5em 0px var(--main), 0px -1.5em 0px var(--main);
@@ -247,8 +239,6 @@ button:disabled {
   max-width: 200px;
   flex-shrink: 0;
 }
-
-
 
 .caption {
   margin-top: 0.5rem;
@@ -286,8 +276,6 @@ button:disabled {
   background-image: linear-gradient( to left , var(--main-dark) , var(--main-light));
 }
 
-/*------------*/
-
 /* Registration */
 form {
   line-height: 0;
@@ -301,74 +289,18 @@ form {
   flex-direction: row;
 }
 
-/*
-input {
-  width: 100%;
-  color: var(--text-color);
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin: 0.3em 2em;
-  padding: 0.3em;
-  border: 0px;
-  
-  border-radius: 25px;
-  
-  background-color: var(--main-light); 
-  
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
-}
-*/
-
 input {
     width: 90.5%;
     color: var(--text-color);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* gap: 1em; */
     margin: 0 2em;
     padding: 0.3em;
     border: 0px;
-    /* border-radius: 25px; */
     background-color: var(--main-light);
     box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
 }
-
-.under_input {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-    /* margin: 0; */
-    padding: 0em;
-    border: 0px;
-    /* border-radius: 25px; */
-    background-color: var(--main-dark);
-    /* box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25); */
-}
-
-/*
-.under_input {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin: 0.3em;
-  padding: 0.3em;
-  border: 0px;
-  
-  border-radius: 25px;
-  
-  background-color: var(--main-dark); 
-  
-  box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
-  
-}
-*/
 
 .reg_state {
   background-color: rgb(255, 91, 91);
@@ -382,15 +314,13 @@ input {
   gap: 1em;
   margin: 0.3em -2em;
   padding: 1em;
-  /* border: 3px solid #ccc; */
-  /* border-radius: 25px; */
   box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
 }
 /*--------------*/
 
-.ad {
+.slogan_block {
   background-color: rgb(139, 0, 139);
-  color: var(--text-color);
+  color: #fff;
   text-align: center;
   margin: 0.3em -2em;
   padding: 0.3em;
