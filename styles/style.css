@@ -41,18 +41,17 @@ html, body {
   background-color: var(--main);
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .left, .right {
-    max-width: 0%;
+    display: none;
   }
 
   .page_container {
-    min-width: 660px;
-    flex: 0 0 100%;
+    flex: 1 1 100%;
     max-width: 100%;
+    min-width: 0; /* Optional: prevents overflow */
   }
 }
-
 .center {
   min-width: 660px;
   background-color: var(--main);
