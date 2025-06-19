@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>CloudShield</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="icon" href="styles/logo.png">
+    <link rel="icon" type="icon" href="styles/images/general/logo.png">
 </head>
 
-<body onload="Initialize()">
+<body>
     
     <div class="container">
 
@@ -17,7 +17,7 @@
 
             <div class="nav">
                 <div class="site_name">
-                    <img src="styles/images/logo.png" id="logo" class="nav_image">
+                    <img src="styles/images/general/logo.png" id="logo" class="nav_image">
                     <h5>CloudShield</h5>
                 </div>
                 
@@ -54,10 +54,19 @@
                         <input for="password" id="password" required>
                     </div>
                         
-                    <label for="confirmPassword"><h3 id="reg_label4">|</h3></label>
+                    <label for="confirm_password"><h3 id="reg_label4">|</h3></label>
                     <div class="form_component">   
-                        <input for="password" id="confirmPassword" required>
+                        <input for="password" id="confirm_password" required>
                     </div>
+
+                    <label for="service_type"><h3 id="reg_label5">|</h3></label></label>
+                    <select id="service_type" required>
+                        <option value="Консалтинг">Консалтинг</option>
+                        <option value="Аудит">Аудит</option>
+                        <option value="Защита">Защита</option>
+                        <option value="Резервное копирование">Резервное копирование</option>
+                    </select>
+                    
 
                     <button id="btn_submit" type="submit" disabled>Зарегистрироваться </button>
                         
@@ -65,11 +74,10 @@
                 </form>
 
             </div>
-            <script src="scripts/js/registartion_stuff.js"></script>
+            <script src="scripts/js/register.js"></script>
             <div class="bottom_block">
                     
                 <p> fedosseyenkosergey@gmail.com | +7-708-070-08-74 </p>
-                <p> ©DoctorXYZ </p>
                     
             </div>
 

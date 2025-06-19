@@ -57,6 +57,7 @@ html, body {
 @media screen and (max-width: 1100px) {
   body {
     font-size: large;
+    overflow: auto;
   }
   .left, .right {
     display: none;
@@ -73,9 +74,8 @@ html, body {
   }
 }
 
-
 /* Script changes */
-body.dark {
+body.light {
   --main: #ddd;
   --main-light: #fff;
   --main-dark: #bbb;
@@ -92,7 +92,6 @@ body.instant_transform {
 }
 
 /* Navgation */
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -150,7 +149,7 @@ img {
   background-color: var(--main);
 }
 
-h1, h3, h5, p, a {
+h1, h3, h5, p, a, li {
   color: var(--text-color);
   text-decoration: none;
 }
@@ -206,8 +205,7 @@ button:disabled {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
+  gap: 2.5em;
   margin: 0.5em -2em;
   padding: 1.5em 3em;
   background-color: var(--main-light); 
@@ -222,14 +220,14 @@ button:disabled {
 .info_block img {
   max-width: 200px;
   height: auto;
-  flex-shrink: 0;
   border: 3px solid var(--main-dark);
   z-index: 3;
-  box-shadow: 0px 1.5em 0px var(--main), 0px -1.5em 0px var(--main);
+  border-radius: 10px;
+  box-shadow: 0px 0em 20px 20px var(--main);
 }
 
 .image_caption img {
-  box-shadow: 0px 50px 0px var(--main), 0px -1.5em 0px var(--main);
+  box-shadow: 0px 0em 20px 20px var(--main), 0px 1.5em 20px 20px var(--main);
 }
 
 .image_caption {
@@ -237,7 +235,6 @@ button:disabled {
   flex-direction: column;
   align-items: center;
   max-width: 200px;
-  flex-shrink: 0;
 }
 
 .caption {
@@ -260,7 +257,6 @@ button:disabled {
 .info_block.text_img {
   flex-direction: row-reverse;
 }
-
 
 .info_block.img_text:hover .info_block.text_img:hover{
   text-decoration: none;
@@ -289,17 +285,26 @@ form {
   flex-direction: row;
 }
 
+input, select {
+  color: var(--text-color);
+  align-items: center;
+  margin: 0 2em;
+  padding: 0.3em;
+  border: 0px;
+  background-color: var(--main-light);
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
+}
+
 input {
-    width: 90.5%;
-    color: var(--text-color);
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 2em;
-    padding: 0.3em;
-    border: 0px;
-    background-color: var(--main-light);
-    box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
+  width: 100%;
+}
+
+input:-webkit-autofill {
+  background-color: var(--main-light) !important;
+  -webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25) !important;
+  color: var(--text-color) !important;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text-color) !important;
 }
 
 .reg_state {
@@ -310,14 +315,13 @@ input {
   padding: 1em;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 1em;
   margin: 0.3em -2em;
   padding: 1em;
   box-shadow: 0px 5px 5px rgba(0,0,0,0.25), 0px -5px 5px rgba(0,0,0,0.25);
 }
-/*--------------*/
 
+/* Misc. */
 .slogan_block {
   background-color: rgb(139, 0, 139);
   color: #fff;
